@@ -17,13 +17,12 @@ public class Calculatrice {
     public double division(double a, double b) {
         if (b == 0) {
             System.out.println("Erreur: Division par zéro !");
-            return Double.NaN; // Return NaN to indicate invalid result
+            
         }
         return a / b;
     }
 
     public static void main(String[] args) {
-        // Création de l'objet Scanner pour l'entrée utilisateur
         Scanner scanner = new Scanner(System.in);
         Calculatrice calc = new Calculatrice();
 
@@ -68,11 +67,7 @@ public class Calculatrice {
                     continue;
             }
 
-            // Only print the result if it's a valid number
-            if (!Double.isNaN(resultat)) {
-                System.out.println("Résultat: " + resultat);
-            }
-
+           
         } while (choix != 5);
     }
 }
